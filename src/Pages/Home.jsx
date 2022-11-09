@@ -9,6 +9,9 @@ const Home = () => {
     <div>
       <Banner />
       <Feature />
+      <h2 className="italic text-center text-xl text font-semibold my-3">
+        You don't take a photograph. You make it. - Ansel Adams
+      </h2>
       <Services />
       <Gallery />
     </div>

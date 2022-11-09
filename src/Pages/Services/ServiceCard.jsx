@@ -5,7 +5,7 @@ const ServiceCard = ({ service }) => {
   const { name, rating, price, details, img, _id } = service;
   return (
     <div>
-      <div className="container mx-auto grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 sm:justify-center gap-5 ">
+      <div className="container mx-auto  grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 sm:justify-center gap-5 ">
         <div className=" card w-96 bg-base-100 shadow-xl">
           <figure>
             <img src={img} alt="Shoes" />
@@ -14,12 +14,7 @@ const ServiceCard = ({ service }) => {
             <h2 className="card-title">{name}</h2>
             <p>
               {details.length > 150 ? (
-                <p>
-                  {details.slice(0, 150) + "..."}{" "}
-                  <Link to={`service/${_id}`} className="text-info">
-                    Read More
-                  </Link>{" "}
-                </p>
+                <p>{details.slice(0, 150) + "..."} </p>
               ) : (
                 <p>{details}</p>
               )}
@@ -30,8 +25,10 @@ const ServiceCard = ({ service }) => {
                 {rating}
                 <FaStar />
               </p>
-              <Link to={`/get-access/${_id}`}>
-                <button className="btn btn-primary">Get Premium Access</button>
+              <Link to={`/service-details/${_id}`}>
+                <button className="btn btn-outline btn-primary">
+                  View Details
+                </button>
               </Link>
             </div>
           </div>

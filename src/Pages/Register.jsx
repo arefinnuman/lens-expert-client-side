@@ -7,7 +7,6 @@ import { AuthContext } from "../Contexts/UserContext";
 const Register = () => {
   const {
     createUser,
-    verifyEmail,
     updateUserProfile,
     signInWithGoogle,
     signInWithGithub,
@@ -81,12 +80,7 @@ const Register = () => {
         form.reset();
         navigate(from, { replace: true });
         handleUpdateUserProfile(name, photoURL);
-        handleEmailVerification();
-        Swal.fire(
-          "Account Created Successfully!",
-          "PLease Check your Email for Verification",
-          "success"
-        );
+        Swal.fire("Account Created Successfully!", "success");
       })
       .catch((error) => {
         console.error(error);
@@ -101,14 +95,6 @@ const Register = () => {
       photoURL: photoURL,
     };
     updateUserProfile(profile)
-      .then(() => {})
-      .catch((error) => {
-        console.error(error);
-      });
-  };
-
-  const handleEmailVerification = () => {
-    verifyEmail()
       .then(() => {})
       .catch((error) => {
         console.error(error);

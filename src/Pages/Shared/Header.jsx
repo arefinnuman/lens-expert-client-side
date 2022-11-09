@@ -1,11 +1,22 @@
 import { Avatar, Dropdown, Navbar } from "flowbite-react";
 import React, { useContext } from "react";
+import toast from "react-hot-toast";
 import { Link } from "react-router-dom";
 import logo from "../../Asset/Logo.jpg";
 import { AuthContext } from "../../Contexts/UserContext";
 
 const Header = () => {
-  const { user } = useContext(AuthContext);
+  const { user, logOut } = useContext(AuthContext);
+
+  const handleLogOut = () => {
+    logOut()
+      .then(() => {
+        toast.success("Logged Out Successfully");
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
   return (
     <div>
       <Navbar fluid={true} rounded={true}>
@@ -34,7 +45,7 @@ const Header = () => {
                 <Dropdown.Item>Settings</Dropdown.Item>
                 <Dropdown.Item>Earnings</Dropdown.Item>
                 <Dropdown.Divider />
-                <Dropdown.Item>Sign out</Dropdown.Item>
+                <Dropdown.Item onClick={handleLogOut}>Sign out</Dropdown.Item>
               </Dropdown>
             </>
           ) : (
