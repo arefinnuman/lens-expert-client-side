@@ -51,9 +51,7 @@ const Header = () => {
           <Navbar.Toggle />
         </div>
         <Navbar.Collapse>
-          <Navbar.Link href="/home" active={true}>
-            Home
-          </Navbar.Link>
+          <Navbar.Link href="/home">Home</Navbar.Link>
           <Navbar.Link href="/services">Services</Navbar.Link>
           <Navbar.Link href="/blog">Blog</Navbar.Link>
           <Navbar.Link href="/about">About</Navbar.Link>
