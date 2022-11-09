@@ -3,6 +3,7 @@ import Root from "../../Layout/Root";
 import About from "../../Pages/About";
 import Blog from "../../Pages/Blog";
 import Contact from "../../Pages/Contact";
+import ErrorPage from "../../Pages/ErrorPage";
 import Home from "../../Pages/Home";
 import Login from "../../Pages/Login";
 import Register from "../../Pages/Register";
@@ -11,6 +12,7 @@ export const routes = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",
