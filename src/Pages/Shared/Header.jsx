@@ -5,7 +5,7 @@ import logo from "../../Asset/Logo.jpg";
 import { AuthContext } from "../../Contexts/UserContext";
 
 const Header = () => {
-  const { user, logOut } = useContext(AuthContext);
+  const { user } = useContext(AuthContext);
   return (
     <div>
       <Navbar fluid={true} rounded={true}>
