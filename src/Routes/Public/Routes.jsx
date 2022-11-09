@@ -4,6 +4,8 @@ import About from "../../Pages/About";
 import Blog from "../../Pages/Blog";
 import Contact from "../../Pages/Contact";
 import Home from "../../Pages/Home";
+import Login from "../../Pages/Login";
+import Register from "../../Pages/Register";
 
 export const routes = createBrowserRouter([
   {
@@ -29,6 +31,14 @@ export const routes = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact />,
+      },
+      {
+        path: "/login",
+        element: <Login />,
+      },
+      {
+        path: "/register",
+        element: <Register />,
       },
     ],
   },
