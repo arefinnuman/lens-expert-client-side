@@ -1,5 +1,6 @@
 import React from "react";
 import { FaStar } from "react-icons/fa";
+import { PhotoProvider, PhotoView } from "react-photo-view";
 import { Link, useLoaderData } from "react-router-dom";
 import Reviews from "../Reviews/Reviews";
 
@@ -13,7 +14,13 @@ const SecviceDetails = () => {
         <div className="xl:container xl:mx-auto">
           <div className="card bg-base-100 shadow-2xl">
             <figure>
-              <img src={img} alt="" />
+              <PhotoProvider>
+                <div className="foo">
+                  <PhotoView src={img}>
+                    <img src={img} alt="" />
+                  </PhotoView>
+                </div>
+              </PhotoProvider>
             </figure>
             <div className="card-body">
               <h2 className="card-title">{name}</h2>
