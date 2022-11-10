@@ -39,7 +39,7 @@ const AddService = () => {
       description,
       addedTimeEncrypted,
     };
-    fetch("https://shakibs-kitchen-server.vercel.app/addfood", {
+    fetch("https://server-site-weld.vercel.app/addservice", {
       method: "POST",
       headers: {
         "content-type": "application/json",
