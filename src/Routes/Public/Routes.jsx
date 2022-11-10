@@ -8,6 +8,7 @@ import Home from "../../Pages/Home";
 import Login from "../../Pages/Login";
 import Register from "../../Pages/Register";
 import ReviewsForm from "../../Pages/Reviews/ReviewsForm";
+import AddService from "../../Pages/Services/AddService";
 import SecviceDetails from "../../Pages/Services/SecviceDetails";
 import Services from "../../Pages/Services/Services";
 import PrivateRoute from "../Private/PrivateRoutes";
@@ -45,6 +46,10 @@ export const routes = createBrowserRouter([
             <ReviewsForm />,
           </PrivateRoute>
         ),
+      },
+      {
+        path: "/add-services",
+        element: <AddService />,
       },
       {
         path: "/blog",
