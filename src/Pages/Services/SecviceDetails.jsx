@@ -2,7 +2,6 @@ import React from "react";
 import { FaStar } from "react-icons/fa";
 import { Link, useLoaderData } from "react-router-dom";
 import Reviews from "../Reviews/Reviews";
-import ReviewsForm from "../Reviews/ReviewsForm";
 
 const SecviceDetails = () => {
   const serviceDetails = useLoaderData();
@@ -36,8 +35,10 @@ const SecviceDetails = () => {
           </div>
         </div>
         <div>
-          <Reviews />
-          <ReviewsForm />
+          <Link to={`/add-review/${_id}`} className="flex justify-center mb-2">
+            <button className="btn "> Add Review</button>
+          </Link>
+          <Reviews _id={_id}></Reviews>
         </div>
       </div>
     </div>

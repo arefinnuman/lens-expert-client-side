@@ -7,8 +7,10 @@ import ErrorPage from "../../Pages/ErrorPage";
 import Home from "../../Pages/Home";
 import Login from "../../Pages/Login";
 import Register from "../../Pages/Register";
+import ReviewsForm from "../../Pages/Reviews/ReviewsForm";
 import SecviceDetails from "../../Pages/Services/SecviceDetails";
 import Services from "../../Pages/Services/Services";
+import PrivateRoute from "../Private/PrivateRoutes";
 
 export const routes = createBrowserRouter([
   {
@@ -32,7 +34,17 @@ export const routes = createBrowserRouter([
         path: "/service-details/:id",
         element: <SecviceDetails />,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/service-details/${params.id}`),
+          fetch(
+            `https://server-site-weld.vercel.app/service-details/${params.id}`
+          ),
+      },
+      {
+        path: "/add-review/:_id",
+        element: (
+          <PrivateRoute>
+            <ReviewsForm />,
+          </PrivateRoute>
+        ),
       },
       {
         path: "/blog",
