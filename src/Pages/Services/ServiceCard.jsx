@@ -1,6 +1,9 @@
 import React from "react";
 import { FaStar } from "react-icons/fa";
+import { PhotoProvider, PhotoView } from "react-photo-view";
+import "react-photo-view/dist/react-photo-view.css";
 import { Link } from "react-router-dom";
+
 const ServiceCard = ({ service }) => {
   const { name, rating, price, details, img, _id } = service;
   return (
@@ -8,7 +11,11 @@ const ServiceCard = ({ service }) => {
       <div className="container mx-auto  grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 sm:justify-center gap-5 ">
         <div className=" card w-96 bg-base-100 shadow-xl">
           <figure>
-            <img src={img} alt="Shoes" />
+            <PhotoProvider>
+              <PhotoView src={img}>
+                <img src={img} alt="" />
+              </PhotoView>
+            </PhotoProvider>
           </figure>
           <div className="card-body">
             <h2 className="card-title">{name}</h2>

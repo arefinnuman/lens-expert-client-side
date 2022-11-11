@@ -1,6 +1,7 @@
 import React from "react";
 import { FaStar } from "react-icons/fa";
 import { PhotoProvider, PhotoView } from "react-photo-view";
+import "react-photo-view/dist/react-photo-view.css";
 import { Link } from "react-router-dom";
 
 const ServicesForHomePage = ({ homeService }) => {
@@ -11,11 +12,9 @@ const ServicesForHomePage = ({ homeService }) => {
         <div className=" card w-96 bg-base-100 shadow-xl">
           <figure>
             <PhotoProvider>
-              <div className="foo">
-                <PhotoView src={img}>
-                  <img src={img} alt="" />
-                </PhotoView>
-              </div>
+              <PhotoView src={img}>
+                <img src={img} alt="" />
+              </PhotoView>
             </PhotoProvider>
           </figure>
           <div className="card-body">

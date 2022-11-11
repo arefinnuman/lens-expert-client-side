@@ -68,12 +68,12 @@ const Login = () => {
 
     logIn(userInfo.email, userInfo.password)
       .then((result) => {
-        toast.success("Logged in successfully!");
+        Swal.fire("Logged in successfully!");
         navigate(from, { replace: true });
         const user = result.user;
         console.log(user);
       })
-      .catch((error) => toast.error(error.message));
+      .catch((error) => Swal.fire(error.message));
   };
 
   const handleReset = () => {
@@ -193,5 +193,4 @@ const Login = () => {
     </div>
   );
 };
-
 export default Login;

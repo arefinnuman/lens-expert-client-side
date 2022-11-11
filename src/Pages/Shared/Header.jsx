@@ -62,11 +62,12 @@ const Header = () => {
           <Navbar.Toggle />
         </div>
         <Navbar.Collapse>
-          <Navbar.Link href="/home">Home</Navbar.Link>
-          <Navbar.Link href="/services">Services</Navbar.Link>
-          <Navbar.Link href="/blog">Blog</Navbar.Link>
-          <Navbar.Link href="/about">About</Navbar.Link>
-          <Navbar.Link href="/contact">Contact</Navbar.Link>
+          <Link to="/home">Home</Link>
+          <Link to="/services">Services</Link>
+          <Link to="/blog">Blog</Link>
+          <Link to="/about">About</Link>
+          <Link to="/contact">Contact</Link>
+          <Link to="/add-services">Add Services</Link>
         </Navbar.Collapse>
       </Navbar>
     </div>
