@@ -30,13 +30,7 @@ const Header = () => {
               <Dropdown
                 arrowIcon={false}
                 inline={true}
-                label={
-                  <Avatar
-                    alt="User settings"
-                    src={user?.photoURL}
-                    rounded={true}
-                  />
-                }
+                label={<Avatar src={user?.photoURL} rounded={true} />}
               >
                 <Dropdown.Header>
                   <span className="block text-sm">{user?.displayName}</span>
@@ -64,10 +58,11 @@ const Header = () => {
         <Navbar.Collapse>
           <Link to="/home">Home</Link>
           <Link to="/services">Services</Link>
+          <Link to="/add-services">Add Services</Link>
+          <Link to="/my-reviews">My Reviews</Link>
           <Link to="/blog">Blog</Link>
           <Link to="/about">About</Link>
           <Link to="/contact">Contact</Link>
-          <Link to="/add-services">Add Services</Link>
         </Navbar.Collapse>
       </Navbar>
     </div>

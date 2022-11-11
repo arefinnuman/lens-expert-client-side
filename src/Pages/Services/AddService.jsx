@@ -5,7 +5,7 @@ const AddService = () => {
   const handleAddService = (e) => {
     e.preventDefault();
     const form = e.target;
-    const name = form.foodName.value;
+    const name = form.serviceName.value;
     const price = form.price.value;
     const img = form.photoURL.value;
     const rating = form.rating.value;
@@ -25,7 +25,7 @@ const AddService = () => {
       addedDate,
     };
 
-    fetch("http://localhost:5000/services", {
+    fetch("https://server-site-weld.vercel.app/services", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -34,7 +34,8 @@ const AddService = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        if (data.acknowledged) {
+        console.log(data);
+        if (data.success) {
           Swal.fire(`${name} added successfully to the database...`);
           form.reset();
         }

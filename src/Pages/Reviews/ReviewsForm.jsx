@@ -6,6 +6,7 @@ import { AuthContext } from "../../Contexts/UserContext";
 
 const ReviewsForm = () => {
   const { user } = useContext(AuthContext);
+  console.log(user);
   const { _id } = useParams();
   console.log(_id);
   console.log(user.email);
@@ -19,6 +20,8 @@ const ReviewsForm = () => {
     const review = {
       comment: e.target.review.value,
       reviewerEmail: e.target.userEmail.value,
+      reviewerName: e.target.userName.value,
+      userPhotoURL: e.target.userPhotoURL.value,
       addedTimeEncrypted,
       addedDate,
       serviceId: _id,
@@ -57,6 +60,20 @@ const ReviewsForm = () => {
               name="userEmail"
               id=""
               value={user.email}
+              readOnly
+            />
+            <input
+              type="text"
+              name="userName"
+              id=""
+              value={user.displayName}
+              readOnly
+            />
+            <input
+              type="text"
+              name="userPhotoURL"
+              id=""
+              value={user.photoURL}
               readOnly
             />
             <div className="flex flex-col w-full">
