@@ -18,9 +18,6 @@ const Review = ({ review }) => {
           </div>
         </td>
         <td>{comment}</td>
-        <th>
-          <button className="btn btn-ghost btn-xs">Delete</button>
-        </th>
       </tr>
     </div>
   );
