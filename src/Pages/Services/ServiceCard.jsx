@@ -9,7 +9,7 @@ const ServiceCard = ({ service }) => {
   return (
     <div>
       <div className="container mx-auto  grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 sm:justify-center gap-5 ">
-        <div className=" card w-96 bg-base-100 shadow-xl">
+        <div className=" card w-80 bg-base-100 shadow-xl">
           <figure>
             <PhotoProvider>
               <PhotoView src={img}>
@@ -21,7 +21,7 @@ const ServiceCard = ({ service }) => {
             <h2 className="card-title">{name}</h2>
             <p>
               {details.length > 150 ? (
-                <p>{details.slice(0, 150) + "..."} </p>
+                <p>{details.slice(0, 60) + "..."} </p>
               ) : (
                 <p>{details}</p>
               )}
@@ -33,7 +33,7 @@ const ServiceCard = ({ service }) => {
                 <FaStar />
               </p>
               <Link to={`/service-details/${_id}`}>
-                <button className="btn btn-outline btn-primary">
+                <button className="btn btn-sm btn-outline btn-primary">
                   View Details
                 </button>
               </Link>

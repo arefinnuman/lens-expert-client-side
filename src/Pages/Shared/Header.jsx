@@ -60,9 +60,6 @@ const Header = () => {
           <Link to="/services">Services</Link>
           <Link to="/add-services">Add Services</Link>
           <Link to="/my-reviews">My Reviews</Link>
-          <Link to="/blog">Blog</Link>
-          <Link to="/about">About</Link>
-          <Link to="/contact">Contact</Link>
         </Navbar.Collapse>
       </Navbar>
     </div>

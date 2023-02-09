@@ -41,7 +41,7 @@ const SecviceDetails = () => {
           </div>
         </div>
         <div>
-          <Link to={`/add-review/${_id}`} className="flex justify-center mb-2">
+          <Link to={`/add-review/${_id}`} className="flex justify-center mt-20">
             <button className="btn "> Add Review</button>
           </Link>
           <Reviews _id={_id}></Reviews>

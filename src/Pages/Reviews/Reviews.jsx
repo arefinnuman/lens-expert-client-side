@@ -17,10 +17,10 @@ const Reviews = ({ _id }) => {
         }
       })
       .catch((err) => console.log(err));
-  }, []);
+  }, [_id]);
 
   return (
-    <div className="container mx-auto grid flex min-h-screen  lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 sm:justify-center gap-5 ">
+    <div className="container mx-auto grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 sm:justify-center gap-5 ">
       {reviews.map((review) => (
         <ReviewCard key={review._id} review={review}></ReviewCard>
       ))}
